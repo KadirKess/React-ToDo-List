@@ -1,14 +1,25 @@
 import { useState } from "react";
 import { getCurrentId, setCurrentId } from "./CurrentId.ts";
 
-const TaskForm = ({ addTask }) => {
+interface Task {
+    id: number;
+    name: string;
+    description: string;
+    state: string
+}
+
+interface TaskFormProps {
+    addTask: (task: Task) => void;
+}
+
+const TaskForm = ({ addTask }: TaskFormProps) => {
     const [name, setName] = useState("");
     const [description, setDescription] = useState("");
 
-    const handleSubmit = (event) => {
+    const handleSubmit = (event: React.FormEvent) => {
         event.preventDefault();
         var id = getCurrentId();
-        addTask({ id, name, description });
+        addTask({ id, name, description, state: "Not started" });
         setCurrentId(getCurrentId() + 1);
         setName("");
         setDescription("");

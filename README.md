@@ -14,7 +14,7 @@ git clone https://github.com/KadirKess/React-ToDo-List.git
 ```
 2. Navigate to the project directory:
 ```bash
-cd todo
+cd React-ToDo-List
 ```
 3. Install the dependencies:
 ```
@@ -31,6 +31,10 @@ Usage
 
 When first launching the app, you will have no tasks, you can create one by clicking on the New Task button.
 After that, the created task will appear below, you will be able to change the state of the task, as well as deleting it.
+
+Screnshot
+-----
+![public/img.png](public/img.png)
 
 To Do
 -----

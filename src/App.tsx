@@ -47,12 +47,12 @@ function App() {
         }
     }, [tasks]);
 
-    const addTask = ({ id, name, description }: Task) => {
+    const addTask = ({ id, name, description, state }: Task) => {
         const newTask: Task = {
             id,
             name,
             description: description || "No description",
-            state: "Not started",
+            state: state,
         };
         setTasks([...tasks, newTask]);
     };
